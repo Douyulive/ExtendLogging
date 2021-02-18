@@ -16,7 +16,7 @@ namespace ExtendLogging
             request.Method = "GET";
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
             if (timeout != 0) { request.Timeout = timeout * 1000; request.ReadWriteTimeout = timeout * 1000; }
-            else request.ReadWriteTimeout = 10000;
+            else { request.Timeout = 3000; request.ReadWriteTimeout = 10000; };
             request.UserAgent = userAgent;
             if (!string.IsNullOrEmpty(cookie))
             {
