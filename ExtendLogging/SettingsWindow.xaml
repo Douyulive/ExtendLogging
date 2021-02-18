@@ -10,7 +10,6 @@
             <StackPanel Margin="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
                 <CheckBox x:Name="ShowLevelBox" IsChecked="{Binding LogLevel}" Content="显示等级"/>
                 <CheckBox x:Name="ShowMedalBox" IsChecked="{Binding LogMedal}" Content="显示勋章" Margin="5,0,0,0"/>
-                <CheckBox x:Name="ShowTitleBox" IsChecked="{Binding LogTitle}" Content="显示头衔" Margin="5,0,0,0"/>
                 <CheckBox x:Name="ShowExternBox" IsChecked="{Binding LogExternInfo}" Content="显示更多信息" Margin="5,0,0,0"/>
             </StackPanel>
             <StackPanel  Margin="5,3,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">

@@ -49,7 +49,7 @@ namespace ExtendLogging
             request.ContentType = "application/x-www-form-urlencoded";
             request.UserAgent = userAgent;
             if (timeout != 0) { request.Timeout = timeout * 1000; request.ReadWriteTimeout = timeout * 1000; }
-            else request.ReadWriteTimeout = 10000;
+            else { request.Timeout = 3000; request.ReadWriteTimeout = 10000; }
             if (!string.IsNullOrEmpty(cookies))
             {
                 request.Headers.Add("Cookie", cookies);
