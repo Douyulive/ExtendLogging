@@ -139,7 +139,7 @@ namespace ExtendLogging
                             string UserNobility = douyuID.ParseNobility(messageModel.UserNobility);
                             string UserRoomIdentity = douyuID.ParseRoomIdentify(messageModel.UserRoomIdentity);
                             string prefix = $"{(UserRoomIdentity == "" ? "" : "[" + UserRoomIdentity + "]")}{(UserNobility == "" ? "" : "[" + UserNobility + "]")}{(PSettings.LogMedal && !string.IsNullOrEmpty(UserMedalName) ? $"{{{UserMedalName},{UserMedalLevel}}}" : null)}{(PSettings.LogLevel ? $"(UL {UserLevel})" : "")}{messageModel.UserName}";
-                            Logging.Invoke(DmjWnd, new object[] { $"收到彈幕:{prefix} 說: {messageModel.CommentText}" });
+                            Logging.Invoke(DmjWnd, new object[] { $"收到弹幕:{prefix} 说: {messageModel.CommentText}" });
                             AddDMText.Invoke(DmjWnd, new object[] { prefix, messageModel.CommentText, false, false, null, false });
                         }
                     }
